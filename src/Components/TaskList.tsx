@@ -10,7 +10,7 @@ interface TaskListProps {
 const TaskList: React.FC<TaskListProps> = ({ tasks, onToggleTask }) => {
   return (
     <div className={"mb-4 pb-8 h-96 max-h-96 overflow-auto"}>
-      {tasks.map((task, index) => (
+      {tasks.map((task) => (
         <TaskItem
           key={task.id}
           task={task}
@@ -21,7 +21,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onToggleTask }) => {
         <div className={"py-4"}>
           <h3
             className={
-              "text-xl  mb-2 text-blue-400 py-12 bg-gray-500/10 rounded-xl"
+              "mb-2 text-lg text-blue-400 py-12 bg-gray-500/10 rounded-xl"
             }
           >
             No tasks

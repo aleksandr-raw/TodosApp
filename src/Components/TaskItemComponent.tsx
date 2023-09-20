@@ -14,12 +14,11 @@ const TaskItemComponent: React.FC<TaskItemProps> = ({ task, onToggle }) => {
         task.completed ? "line-through" : ""
       }`}
     >
-      <Checkbox
-        checked={task.completed}
-        onChange={onToggle}
-        className={"mr-2"}
-      />
-      <span className={"first-letter:uppercase"}>{task.description}</span>
+      <Checkbox checked={task.completed} onChange={onToggle} className={"mr-2"}>
+        <span className={"text-white text-lg first-letter:uppercase"}>
+          {task.description}
+        </span>
+      </Checkbox>
     </div>
   );
 };

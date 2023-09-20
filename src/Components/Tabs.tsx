@@ -11,8 +11,9 @@ const tabs: Tab[] = ["All", "Active", "Completed"];
 
 const Tabs: React.FC<TabsProps> = ({ activeTab, onTabChange }) => {
   return (
-    <div className=" justify-center">
+    <div className="justify-center">
       <Segmented
+        className={"text-white bg-gray-600"}
         block={true}
         options={tabs}
         value={activeTab}

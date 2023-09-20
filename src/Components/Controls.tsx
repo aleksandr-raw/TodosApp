@@ -18,24 +18,23 @@ const Controls: React.FC<ControlsProps> = ({
   clearCompleted,
 }) => {
   return (
-    <div className="flex flex-col justify-between space-y-2 md:flex-row md:items-center">
+    <div className="flex flex-col justify-between space-y-4">
       <div>
-        <Badge
-          count={tasksLeftCount}
-          style={{ backgroundColor: "rgb(30 90 250)" }}
-        />
-        left count
+        <Badge count={tasksLeftCount} color="#1e59fa" />
+        &nbsp;left count
       </div>
-
       <Tabs activeTab={activeTab} onTabChange={onTabChange} />
-      <Button
-        type={"text"}
-        icon={<ClearOutlined />}
-        className={"text-white hover:!text-blue-500"}
-        onClick={clearCompleted}
-      >
-        Clear completed
-      </Button>
+      <div>
+        <Button
+          type={"text"}
+          size={"small"}
+          icon={<ClearOutlined className={"text-blue-400"} />}
+          className={"text-white hover:!text-blue-500"}
+          onClick={clearCompleted}
+        >
+          Clear completed
+        </Button>
+      </div>
     </div>
   );
 };
